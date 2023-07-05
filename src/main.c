@@ -1,7 +1,7 @@
 /* main.c - Application main entry point */
 
 /*
- * Copyright (c) 2019 Nordic Semiconductor ASA
+ * Copyright (c) 2023 Nordic Semiconductor ASA
  *
  * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
  */
@@ -48,44 +48,10 @@ void main(void)
 	int err;
 
 	printk("Starting NFC TAG Reader example\n");
-#if 0
-	nfc_t4t_hl_procedure_cb_register(&t4t_hl_procedure_cb);
 
-	k_work_init_delayable(&transmit_work, transfer_handler);
-
-	err = nfc_t4t_isodep_init(tx_data, sizeof(tx_data),
-				  t4t.data, sizeof(t4t.data),
-				  &t4t_isodep_cb);
-	if (err) {
-		printk("NFC T4T ISO-DEP Protocol initialization failed err: %d.\n",
-		       err);
-		return;
-	}
-/*
-	err = st25r3911b_nfca_init(events, ARRAY_SIZE(events), &cb);
-	if (err) {
-		printk("NFCA initialization failed err: %d.\n", err);
-		return;
-	}
-
-	err = st25r3911b_nfca_field_on();
-	if (err) {
-		printk("Field on error %d.", err);
-		return;
-	}
-
-	while (true) {
-		k_poll(events, ARRAY_SIZE(events), K_FOREVER);
-		err = st25r3911b_nfca_process();
-		if (err) {
-			printk("NFC-A process failed, err: %d.\n", err);
-			return;
-		}
-	}*/
-#endif
 
 	st25r3916InitInterrupts(&irq_sem);
-struct k_thread my_thread_data;
+	struct k_thread my_thread_data;
 	
 	k_tid_t my_tid = k_thread_create(&my_thread_data, my_stack_area,
 									 K_THREAD_STACK_SIZEOF(my_stack_area),

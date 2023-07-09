@@ -7,7 +7,7 @@ NFC: Tag reader
    :local:
    :depth: 2
 
-The NFC Tag reader sample demonstrates how to use the :ref:`st25r3911b_nfc_readme` driver to interact with an NFC-A Tag.
+The NFC Tag reader sample demonstrates how to use the :ref:`st25r3916_nfc_readme` driver to interact with an NFC-A Tag.
 
 Requirements
 ************
@@ -18,13 +18,13 @@ The sample supports the following development kits:
 
 The sample has the following additional requirements:
 
-* NFC Reader ST25R3911B Nucleo expansion board (X-NUCLEO-NFC05A1)
+* NFC Reader ST25R3916 Nucleo expansion board (X-NUCLEO-NFC06A1)
 * NFC Type 2 Tag or Type 4 Tag
 
 Overview
 ********
 
-The sample shows how to use the ST25R3911B NFC reader to read data from a tag that supports the ISO/IEC 14443 standard (NFC-A technology).
+The sample shows how to use the ST25R3916 NFC reader to read data from a tag that supports the ISO/IEC 14443 standard (NFC-A technology).
 You can use this device to read and parse content of an NFC Type 2 Tag or Type 4 Tag.
 
 After successful parsing, the tag content is printed using the logging subsystem.
@@ -54,7 +54,7 @@ Complete the following steps:
 1. Connect the Nucleo expansion board to the development kit.
 #. |connect_terminal|
 #. Reset the kit.
-#. Touch the ST25R3911B NFC reader with a Type 2 Tag or Type 4 Tag.
+#. Touch the ST25R3916 NFC reader with a Type 2 Tag or Type 4 Tag.
 #. Observe the output in the terminal.
    The content of the tag is printed there.
 #. After a short delay, the tag can be read again.
@@ -64,7 +64,7 @@ Dependencies
 
 This sample uses the following |NCS| drivers:
 
-* :ref:`st25r3911b_nfc_readme`
+* :ref:`st25r3916_nfc_readme`
 
 This sample uses the following |NCS| libraries:
 
